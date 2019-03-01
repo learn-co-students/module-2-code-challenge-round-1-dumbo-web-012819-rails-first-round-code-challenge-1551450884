@@ -1,0 +1,26 @@
+<h1>Create Heroine</h1>
+
+<% if @heroine.errors.any? %>
+  <ul>
+  <% @heroine.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+<%= form_for @heroine, html: { autocomplete: "off" }  do |f| %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :super_name %>
+  <br>
+  <%= f.text_field :super_name %>
+  <br>
+
+  <%= f.collection_select :power_id, @powers, :id, :name ,  {:prompt => "Please Select"} %>
+
+
+  <%= f.submit %>
+<% end %>
