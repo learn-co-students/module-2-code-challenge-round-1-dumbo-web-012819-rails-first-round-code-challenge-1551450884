@@ -1,0 +1,3 @@
+class HeroinePower < ApplicationRecord
+
+end

@@ -1,9 +1,13 @@
 <h2>All Heroines</h2>
 
+<button type="button" class="btn btn-danger"><%= link_to "New Heroine", new_heroine_url(@heroine), id: 'button' %></button>
+<br>
+<br>
+<br>
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%=link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
