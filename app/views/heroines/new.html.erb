@@ -1,0 +1,15 @@
+
+
+<% @heroine.errors.full_messages.map do |error| %>
+  <h3 style="color:red;"><%= error %></h3>
+  <br>
+<% end %>
+
+
+<h1> Create a heroine!</h1>
+<%= form_for @heroine do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :super_name %>
+  <%= f.collection_select :power_id, Power.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
