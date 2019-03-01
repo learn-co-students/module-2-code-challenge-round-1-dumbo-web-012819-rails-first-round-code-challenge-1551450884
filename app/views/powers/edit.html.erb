@@ -1,0 +1,11 @@
+<h1>Edit <%= @power.caps %>:</h1>
+
+<%= form_for(@power) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br><br>
+  <%= f.label :description %>
+  <%= f.text_field :description%>
+  <br><br>
+  <%= f.submit "Update #{@power.caps}"%>
+<% end %>

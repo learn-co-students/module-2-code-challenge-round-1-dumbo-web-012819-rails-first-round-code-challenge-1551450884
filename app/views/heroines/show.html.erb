@@ -1,0 +1,7 @@
+<h1>The Amazing, <i><%= @heroine.super_name %></i>!</h1>
+<h3><%= @heroine.name %></h3>
+<p>Super Power: <i><%= link_to @heroine.power.caps, @heroine.power %><i></p>
+
+<%= button_to "Edit #{@heroine.super_name}", edit_heroine_path, method: :get %>
+<br>
+<%= button_to "Delete #{@heroine.super_name}", @heroine, method: :delete %>
