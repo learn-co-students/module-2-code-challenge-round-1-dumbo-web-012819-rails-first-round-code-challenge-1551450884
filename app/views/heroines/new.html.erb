@@ -1,0 +1,15 @@
+<h1>Create Heroine:</h1>
+
+<h2><%=form_for @heroine do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+<br>
+  <%= f.label :super_name %><br>
+  <%= f.text_field :super_name %>
+  <%# create button... running out of time... sorry %>
+    <%# I need to select the  %>
+  <%= f.collection_select :powers, powers_url, Power.all, "Please Select", @heroine %>
+    <%= f.submit %>
+  </h2>
+<% end %>
+
