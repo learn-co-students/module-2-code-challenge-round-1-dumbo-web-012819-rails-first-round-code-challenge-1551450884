@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :powers, only: [:index]
-  resources :heroines, only: [:index]  
+  resources :powers, except: [:destroy]
+  resources :heroines, except: [:destroy]
+
+  # get '/search/:id', to: 'heroines#search', as: "search"
+
 end
