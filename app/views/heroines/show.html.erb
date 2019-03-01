@@ -1,0 +1,6 @@
+<h1><%= @heroine.name %>'s Page</h1>
+
+<ul>
+  <li><b>Aka: </b><%= @heroine.super_name %></li>
+  <li><b>Power: </b><%= link_to @heroine.power.name.titleize, power_path(@heroine.power) %></li>
+</ul>
