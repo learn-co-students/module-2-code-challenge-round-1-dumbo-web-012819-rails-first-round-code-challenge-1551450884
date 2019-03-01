@@ -1,0 +1,12 @@
+<h1>The Amazing Power of, <i><%= @power.caps %></i></h1>
+
+<h3>Description: <i><%= @power.description %>.</i></h3>
+
+Power of <i><%= @power.caps %></i> attained by:
+<ul>
+  <% @power.heroines.each do |heroine|  %>
+    <li><%=link_to heroine.name, heroine %></li>
+  <% end  %>
+</ul>
+
+<%= button_to "Edit #{@power.caps}", edit_power_path, method: :get %>
