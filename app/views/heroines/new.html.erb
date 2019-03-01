@@ -1,0 +1,16 @@
+<h1>Create Heroine</h1>
+
+<%= @heroine.errors.full_messages %>
+
+<%= form_for(@heroine) do |f| %>
+
+  <label>Name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label> Super Name: </label><br>
+  <%= f.text_field :super_name %><br>
+
+  <%= f.collection_select :power_id, Power.all, :id, :name %>
+  <%= f.submit %>
+
+<% end %>
