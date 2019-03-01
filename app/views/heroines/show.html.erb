@@ -1,0 +1,8 @@
+<h1><%= @heroine.super_name %></h1>
+<ul>
+<li>Name: <%= @heroine.name %></li>
+<li>Super Name: <%= @heroine.super_name %></li>
+<li>Power: <%= link_to @powers.find(@heroine.power_id).name, power_path(@powers.find(@heroine.power_id)) %></li>
+</ul>
+
+<%= link_to "Heroine list", heroines_path %>

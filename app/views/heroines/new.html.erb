@@ -1,0 +1,27 @@
+
+<% if @heroine.errors.any? %>
+<ul>
+  <% @heroine.errors.full_messages.each do |msg|%>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @heroine do |f| %>
+<ul>
+  <li>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </li>
+  <li>
+  <%= f.label :super_name %>
+  <%= f.text_field :super_name %>
+  </li>
+  <li>
+  <%= f.collection_select :power_id, @powers, :id, :name %>
+  </li>
+  <li>
+  <%= f.submit "Create New Heroine" %>
+  </li>
+</ul>
+<% end %>
