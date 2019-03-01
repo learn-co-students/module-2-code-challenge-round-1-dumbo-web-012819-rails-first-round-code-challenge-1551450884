@@ -1,0 +1,13 @@
+<h1>Edit <%= @power.name %></h1>
+
+<ul>
+  <%= form_for @power do |f| %>
+    <li><%= f.label :name %>
+    <%= f.text_field :name %></li>
+    <li><%= f.label :description %>
+    <%= f.text_area :description %></li>
+
+    <%= f.submit %>
+  <% end %>
+</ul>
+<%= link_to "Back", @power %>
