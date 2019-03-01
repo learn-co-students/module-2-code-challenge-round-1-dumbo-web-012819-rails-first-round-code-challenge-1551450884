@@ -11,16 +11,16 @@ powers = [
 powers.each {|power| Power.create(power)}
 
 heroines = [
-  {name: "Kamala Khan", super_name: "Ms. Marvel"},
-  {name: "Doreen Green", super_name: "Squirrel Girl" },
-  {name:"Gwen Stacy", super_name:"Spider-Gwen" },
-  {name:"Janet Van Dyne", super_name:"The Wasp" },
-  {name:"Wanda Maximoff", super_name:"Scarlet Witch" },
-  {name:"Carol Danvers", super_name:"Captain Marvel" },
-  {name:"Jean Grey", super_name:"Dark Phoenix" },
-  {name:"Ororo Munroe", super_name:"Storm" },
-  {name:"Kitty Pryde", super_name:"Shadowcat" },
-  {name:"Elektra Natchios", super_name:"Elektra" }
+  {name: "Kamala Khan", super_name: "Ms. Marvel", power: Power.first},
+  {name: "Doreen Green", super_name: "Squirrel Girl", power: Power.second },
+  {name:"Gwen Stacy", super_name:"Spider-Gwen", power: Power.third },
+  {name:"Janet Van Dyne", super_name:"The Wasp", power: Power.third },
+  {name:"Wanda Maximoff", super_name:"Scarlet Witch", power: Power.fourth },
+  {name:"Carol Danvers", super_name:"Captain Marvel", power: Power.fourth },
+  {name:"Jean Grey", super_name:"Dark Phoenix", power: Power.first },
+  {name:"Ororo Munroe", super_name:"Storm", power: Power.fourth },
+  {name:"Kitty Pryde", super_name:"Shadowcat", power: Power.third },
+  {name:"Elektra Natchios", super_name:"Elektra", power: Power.second }
 ]
 
 # ---------------
